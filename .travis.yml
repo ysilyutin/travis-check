@@ -4,7 +4,10 @@ python:
     - 3.3
 
 
-install:: "sudo pip install -U selenium"
+install:: 
+	- pip install -U selenium
+	- pip install discover
+
 
 script:
     - python runner_tests.py
