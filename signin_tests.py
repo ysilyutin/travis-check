@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+from pyvirtualdisplay import Display
 from random import choice
 from string import ascii_letters, digits
 
@@ -7,6 +8,9 @@ class SignInTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
+
+        display = Display(visible=0, size=(1024, 768))
+        display.start()
         # Create a new Firefox session
         cls.driver = webdriver.Firefox()
         cls.driver.implicitly_wait(30)
@@ -58,6 +62,7 @@ class SignInTest(unittest.TestCase):
     def tearDownClass(cls):
         # Close the browser window
         cls.driver.quit()
+        display.stop()
 
     if __name__ == '__main__':
         unittest.main(verbosity=2)
