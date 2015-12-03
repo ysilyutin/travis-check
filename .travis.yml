@@ -8,7 +8,7 @@ python:
 install: "pip install -U selenium"
 
 script:
-    - python _runner_tests.py
+    - python3 runner_tests.py
 
 notifications:
   email: true
