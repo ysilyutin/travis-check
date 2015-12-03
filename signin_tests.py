@@ -8,7 +8,6 @@ class SignInTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-
         cls.display = Display(visible=0, size=(1024, 768))
         cls.display.start()
         # Create a new Firefox session

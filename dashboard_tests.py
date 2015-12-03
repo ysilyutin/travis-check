@@ -1,4 +1,5 @@
 import unittest
+from selenium import webdriver
 from pyvirtualdisplay import Display
 from selenium import webdriver
 import selenium.webdriver.support.ui as ui
