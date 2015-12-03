@@ -5,10 +5,13 @@ python:
     - 3.2
     - 3.3
 
-install: "pip install -U selenium"
+addons:
+  firefox: "39.0"
+
+install: "sudo pip install -U selenium"
 
 script:
-    - python3 runner_tests.py
+    - python runner_tests.py
 
 notifications:
   email: true
