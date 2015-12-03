@@ -28,12 +28,12 @@ class SignInTest(unittest.TestCase):
         sign_in_button = self.driver.find_element_by_id("log-in")
 
         # Enter valid email\password and click Sign In button
-        email_field.send_keys("*****@testmunk.com")
-        password_field.send_keys("****")
+        email_field.send_keys("lukas@testmunk.com")
+        password_field.send_keys("test")
         sign_in_button.click()
 
         title = self.driver.title
-        self.assertEqual(title, "Dashboard | Testmunk")
+        self.assertEqual(title, "Sign In | Testmunk")
 
     def test_signin_with_invalid_credentials(self):
         # Get the email and password textboxes
@@ -49,7 +49,7 @@ class SignInTest(unittest.TestCase):
         random_password = ''.join([choice(ascii_letters + digits) for i in range(32)])
 
         # Enter valid email\password and click Sign In button
-        email_field.send_keys("*****@testmunk.com")
+        email_field.send_keys("lukas@testmunk.com")
         password_field.send_keys(random_password)
 
         sign_in_button.click()

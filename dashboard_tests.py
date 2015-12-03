@@ -37,8 +37,8 @@ class DashboardTest(unittest.TestCase):
         sign_in_button = self.driver.find_element_by_id("log-in")
 
         # Enter valid email\password and click Sign In button
-        email_field.send_keys("*****@testmunk.com")
-        password_field.send_keys("****")
+        email_field.send_keys("lukas@testmunk.com")
+        password_field.send_keys("test")
         sign_in_button.click()
 
         # New Testrun button should open the new popup window
