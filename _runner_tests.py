@@ -1,5 +1,4 @@
 import unittest
-import sys
 from signin_test import SignInTest
 from dashboard_test import DashboardTest
 
@@ -10,4 +9,3 @@ smoke_tests = unittest.TestSuite([dashboard_tests, sign_in_tests])
 
 if __name__ == '__main__':
     unittest.TextTestRunner(verbosity=2).run(smoke_tests)
-    sys.exit(not res.wasSuccessful())
