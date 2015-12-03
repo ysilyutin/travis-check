@@ -10,4 +10,4 @@ script:
     - python runner_tests.py
 
 notifications:
-  email: true
+  email: false
