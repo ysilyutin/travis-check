@@ -1,6 +1,6 @@
 import unittest
-from signin_test import SignInTest
-from dashboard_test import DashboardTest
+from signin_tests import SignInTest
+from dashboard_tests import DashboardTest
 
 sign_in_tests = unittest.defaultTestLoader.loadTestsFromTestCase(SignInTest)
 dashboard_tests = unittest.defaultTestLoader.loadTestsFromTestCase(DashboardTest)
