@@ -33,7 +33,7 @@ class SignInTest(unittest.TestCase):
         sign_in_button.click()
 
         title = self.driver.title
-        self.assertEqual(title, "Sign In | Testmunk")
+        self.assertEqual(title, "Dashboard | Testmunk")
 
     def test_signin_with_invalid_credentials(self):
         # Get the email and password textboxes
