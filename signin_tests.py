@@ -28,8 +28,8 @@ class SignInTest(unittest.TestCase):
         sign_in_button = self.driver.find_element_by_id("log-in")
 
         # Enter valid email\password and click Sign In button
-        email_field.send_keys("lukas@testmunk.com")
-        password_field.send_keys("test")
+        email_field.send_keys("*****@testmunk.com")
+        password_field.send_keys("****")
         sign_in_button.click()
 
         title = self.driver.title
@@ -49,7 +49,7 @@ class SignInTest(unittest.TestCase):
         random_password = ''.join([choice(ascii_letters + digits) for i in range(32)])
 
         # Enter valid email\password and click Sign In button
-        email_field.send_keys("lukas@testmunk.com")
+        email_field.send_keys("*****@testmunk.com")
         password_field.send_keys(random_password)
 
         sign_in_button.click()
